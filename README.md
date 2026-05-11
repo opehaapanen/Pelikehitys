@@ -45,7 +45,7 @@ public class ScoreContext : DbContext
 
 ```
 
-\---
+***
 ## 3. Muuta Score-luokka Entity Frameworkille sopivaksi
 
 Entity Framework tarvitsee yleensä `Id`-kentän.
@@ -70,7 +70,7 @@ public class Score
 }
 
 ```
-\---
+***
 
 ## 4. Lisää SQLite yhteys Program.cs:ään
 
@@ -102,7 +102,7 @@ app.MapGet("/leaderboard", async (ScoreContext db) =>
 app.Run();
 
 ```
-\---
+***
 
 ## 5. Luo tietokanta migrationeilla
 
@@ -113,9 +113,9 @@ dotnet ef database update
 ```
 Tämän jälkeen projektiin syntyy:
 
- -'scores.db` → SQLite-tietokanta
+ - `scores.db` → SQLite-tietokanta
  - `Migrations`-kansio
-\---
+***
 
 ## 6. Testaa API
 
