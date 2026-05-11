@@ -1,4 +1,5 @@
 # Pelikehitys
+
 PowerSchell - OHJE Minimal API Server harjoitukseen
 
 
@@ -63,17 +64,17 @@ public class ScoreContext : DbContext
 
 {
 
-&#x20;   public ScoreContext(DbContextOptions<ScoreContext> options)
+    public ScoreContext(DbContextOptions<ScoreContext> options)
 
-&#x20;       : base(options)
+        : base(options)
 
-&#x20;   {
+    {
 
-&#x20;   }
+    }
 
 
 
-&#x20;   public DbSet<Score> Scores => Set<Score>();
+    public DbSet<Score> Scores => Set<Score>();
 
 }
 
@@ -99,35 +100,35 @@ public class Score
 
 {
 
-&#x20;   public int Id { get; set; }
+    public int Id { get; set; }
 
 
 
-&#x20;   public string Name { get; set; } = "";
+    public string Name { get; set; } = "";
 
 
 
-&#x20;   public int Points { get; set; }
+    public int Points { get; set; }
 
 
 
-&#x20;   public Score()
+    public Score()
 
-&#x20;   {
+    {
 
-&#x20;   }
+    }
 
 
 
-&#x20;   public Score(string name, int points)
+    public Score(string name, int points)
 
-&#x20;   {
+    {
 
-&#x20;       Name = name;
+        Name = name;
 
-&#x20;       Points = points;
+        Points = points;
 
-&#x20;   }
+    }
 
 }
 
@@ -159,7 +160,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<ScoreContext>(options =>
 
-&#x20;   options.UseSqlite("Data Source=scores.db"));
+    options.UseSqlite("Data Source=scores.db"));
 
 
 
@@ -171,13 +172,13 @@ app.MapPost("/score", async (Score score, ScoreContext db) =>
 
 {
 
-&#x20;   db.Scores.Add(score);
+    db.Scores.Add(score);
 
-&#x20;   await db.SaveChangesAsync();
+    await db.SaveChangesAsync();
 
 
 
-&#x20;   return Results.Ok();
+    return Results.Ok();
 
 });
 
@@ -187,13 +188,13 @@ app.MapGet("/leaderboard", async (ScoreContext db) =>
 
 {
 
-&#x20;   return await db.Scores
+    return await db.Scores
 
-&#x20;       .OrderByDescending(s => s.Points)
+        .OrderByDescending(s => s.Points)
 
-&#x20;       .Take(5)
+        .Take(5)
 
-&#x20;       .ToListAsync();
+        .ToListAsync();
 
 });
 
@@ -259,9 +260,9 @@ Content-Type: application/json
 
 {
 
-&#x20; "name": "Matti",
+  "name": "Matti",
 
-&#x20; "points": 123
+  "points": 123
 
 }
 
