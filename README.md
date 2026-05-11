@@ -1,6 +1,7 @@
 # Pelikehitys
 
 PowerSchell - OHJE Minimal API Server harjoitukseen:
+
 \- Luo kansio C-asemalle (esim. DotNetSqlite)
 
 \- aja komento dotnet new web
@@ -9,13 +10,14 @@ PowerSchell - OHJE Minimal API Server harjoitukseen:
 
 \*\* Jos tässä vaiheessa tulee käyttöesto virhe, niin suorita alla oleva komento \*\*
 
-\- *Add-MpPreference -AttackSurfaceReductionOnlyExclusions "<fully qualified path or resource>"*
+\- *Add-MpPreference -AttackSurfaceReductionOnlyExclusions ""<fully qualified path or resource>""*
 
 \*\* esim. Add-MpPreference -AttackSurfaceReductionOnlyExclusions "C:\\DotNet\_Sqlite\\bin\\Debug\\net10.0\\DotNet\_Sqlite.exe" \*\*
 
 Voit lisätä SQLite-tietokannan Minimal API -projektiin käyttämällä Entity Framework Core + SQLite-provideria. Alla yksinkertainen tapa tehdä se vaiheittain.
 
 \## 1. Asenna NuGet-paketit
+
 Projektikansiossa:
 
 ```bash
@@ -29,6 +31,7 @@ dotnet add package Microsoft.EntityFrameworkCore.Design
 \---
 
 \## 2. Luo DbContext
+
 Lisää uusi tiedosto esimerkiksi `ScoreContext.cs`:
 
 ```csharp
@@ -73,6 +76,7 @@ public class Score
 ```
 \---
 \## 4. Lisää SQLite yhteys Program.cs:ään
+
 Korvaa nykyinen koodi tällä:
 
 ```csharp
@@ -104,6 +108,7 @@ app.Run();
 \---
 
 \## 5. Luo tietokanta migrationeilla
+
 Suorita:
 ```bash
 dotnet ef migrations add InitialCreate
@@ -115,6 +120,7 @@ Tämän jälkeen projektiin syntyy:
 \---
 
 \## 6. Testaa API
+
 POST:
 ```http
 POST /score
@@ -130,15 +136,23 @@ GET /leaderboard
 ```
 \---
 \## Lopputulos
+
 Nyt data:
+
 \* säilyy ohjelman sammuttamisen jälkeen
+
 \* tallentuu SQLite-tiedostoon
+
 \* toimii oikeana tietokantana muistissa olevan `List<Score>`-listan sijaan
 
 Jos haluat, voit ChatGPT avulla tutkia myös näitä:
+
 \* miten lisätään automaattinen tietokannan luonti ilman migrationeja
+
 \* miten käytetään `appsettings.json`
+
 \* miten tehdään Docker-yhteensopiva SQLite-ratkaisu
+
 \* miten lisätään Swagger/OpenAPI tähän Minimal API:in
 
 
