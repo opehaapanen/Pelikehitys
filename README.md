@@ -46,7 +46,7 @@ public class ScoreContext : DbContext
 ```
 
 \---
-\## 3. Muuta Score-luokka Entity Frameworkille sopivaksi
+## 3. Muuta Score-luokka Entity Frameworkille sopivaksi
 
 Entity Framework tarvitsee yleensä `Id`-kentän.
 
@@ -71,7 +71,8 @@ public class Score
 
 ```
 \---
-\## 4. Lisää SQLite yhteys Program.cs:ään
+
+## 4. Lisää SQLite yhteys Program.cs:ään
 
 Korvaa nykyinen koodi tällä:
 
@@ -103,7 +104,7 @@ app.Run();
 ```
 \---
 
-\## 5. Luo tietokanta migrationeilla
+## 5. Luo tietokanta migrationeilla
 
 Suorita:
 ```bash
@@ -112,13 +113,11 @@ dotnet ef database update
 ```
 Tämän jälkeen projektiin syntyy:
 
-\* `scores.db` → SQLite-tietokanta
-
-\* `Migrations`-kansio
-
+ -'scores.db` → SQLite-tietokanta
+ - `Migrations`-kansio
 \---
 
-\## 6. Testaa API
+## 6. Testaa API
 
 POST:
 ```http
@@ -134,25 +133,20 @@ GET:
 GET /leaderboard
 ```
 \---
-\## Lopputulos
+## Lopputulos
 
 Nyt data:
 
-\* säilyy ohjelman sammuttamisen jälkeen
-
-\* tallentuu SQLite-tiedostoon
-
-\* toimii oikeana tietokantana muistissa olevan `List<Score>`-listan sijaan
+- säilyy ohjelman sammuttamisen jälkeen
+- tallentuu SQLite-tiedostoon
+- toimii oikeana tietokantana muistissa olevan `List<Score>`-listan sijaan
 
 Jos haluat, voit ChatGPT avulla tutkia myös näitä:
 
-\* miten lisätään automaattinen tietokannan luonti ilman migrationeja
-
-\* miten käytetään `appsettings.json`
-
-\* miten tehdään Docker-yhteensopiva SQLite-ratkaisu
-
-\* miten lisätään Swagger/OpenAPI tähän Minimal API:in
+- miten lisätään automaattinen tietokannan luonti ilman migrationeja
+- miten käytetään `appsettings.json`
+- miten tehdään Docker-yhteensopiva SQLite-ratkaisu
+- miten lisätään Swagger/OpenAPI tähän Minimal API:in
 
 
 
