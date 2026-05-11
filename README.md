@@ -14,7 +14,7 @@ Add-MpPreference -AttackSurfaceReductionOnlyExclusions "<fully_qualified_path_or
 
 Voit lisätä SQLite-tietokannan Minimal API -projektiin käyttämällä Entity Framework Core + SQLite-provideria. Alla yksinkertainen tapa tehdä se vaiheittain.
 
-\## 1. Asenna NuGet-paketit
+# 1. Asenna NuGet-paketit
 
 Projektikansiossa:
 
