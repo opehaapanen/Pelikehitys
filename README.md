@@ -10,7 +10,7 @@ PowerSchell - OHJE Minimal API Server harjoitukseen:
 
 \*\* Jos tässä vaiheessa tulee käyttöesto virhe, niin suorita alla oleva komento \*\*
 
-\- *Add-MpPreference -AttackSurfaceReductionOnlyExclusions ""<fully qualified path or resource>""*
+\- *Add-MpPreference -AttackSurfaceReductionOnlyExclusions "<fully_qualified_path_or_resource>"*
 
 \*\* esim. Add-MpPreference -AttackSurfaceReductionOnlyExclusions "C:\\DotNet\_Sqlite\\bin\\Debug\\net10.0\\DotNet\_Sqlite.exe" \*\*
 
@@ -115,8 +115,11 @@ dotnet ef migrations add InitialCreate
 dotnet ef database update
 ```
 Tämän jälkeen projektiin syntyy:
+
 \* `scores.db` → SQLite-tietokanta
+
 \* `Migrations`-kansio
+
 \---
 
 \## 6. Testaa API
