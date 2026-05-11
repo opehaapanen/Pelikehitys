@@ -10,7 +10,7 @@ PowerShell - OHJE Minimal API Server harjoitukseen:
 ```bash
 Add-MpPreference -AttackSurfaceReductionOnlyExclusions "<fully_qualified_path_or_resource>"
 ```
--esim. Add-MpPreference -AttackSurfaceReductionOnlyExclusions "C:\\DotNet\_Sqlite\\bin\\Debug\\net10.0\\DotNet\_Sqlite.exe"
+- esim. Add-MpPreference -AttackSurfaceReductionOnlyExclusions "C:\\DotNet\_Sqlite\\bin\\Debug\\net10.0\\DotNet\_Sqlite.exe"
 
 Voit lisätä SQLite-tietokannan Minimal API -projektiin käyttämällä Entity Framework Core + SQLite-provideria. Alla yksinkertainen tapa tehdä se vaiheittain.
 
