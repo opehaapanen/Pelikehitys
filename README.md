@@ -6,7 +6,7 @@ PowerShell - OHJE Minimal API Server harjoitukseen:
 - aja komento dotnet new web
 - aja komento dotnet run
 
-** Jos tässä vaiheessa tulee käyttöesto virhe, niin suorita alla oleva komento **
+**Jos tässä vaiheessa tulee käyttöesto virhe, niin suorita alla oleva komento**
 
 \- *Add-MpPreference -AttackSurfaceReductionOnlyExclusions "<fully_qualified_path_or_resource>"*
 
