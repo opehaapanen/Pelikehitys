@@ -8,7 +8,7 @@ PowerShell - OHJE Minimal API Server harjoitukseen:
 
 **Jos tässä vaiheessa tulee käyttöesto virhe, niin suorita alla oleva komento**
 ```bash
-*Add-MpPreference -AttackSurfaceReductionOnlyExclusions "<fully_qualified_path_or_resource>"*
+Add-MpPreference -AttackSurfaceReductionOnlyExclusions "<fully_qualified_path_or_resource>"
 ```
 \*\* esim. Add-MpPreference -AttackSurfaceReductionOnlyExclusions "C:\\DotNet\_Sqlite\\bin\\Debug\\net10.0\\DotNet\_Sqlite.exe" \*\*
 
