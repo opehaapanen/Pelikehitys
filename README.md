@@ -3,8 +3,8 @@
 **Avaa PowerShell:**
 
 - Luo kansio C-asemalle (esim. DotNetSqlite)
-- aja komento dotnet new web
-- aja komento dotnet run
+- aja komento *dotnet new web*
+- aja komento *dotnet run*
 
 **Jos tässä vaiheessa tulee käyttöesto virhe, niin suorita alla oleva komento**
 ```bash
