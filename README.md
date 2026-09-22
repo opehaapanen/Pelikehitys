@@ -1,6 +1,6 @@
-# Pelikehitys
+# Pelikehitys - Minimal API Server harjoitus
 
-PowerShell - OHJE Minimal API Server harjoitukseen:
+**Avaa PowerShell:**
 
 - Luo kansio C-asemalle (esim. DotNetSqlite)
 - aja komento dotnet new web
